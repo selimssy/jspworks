@@ -34,3 +34,10 @@ request.setCharacterEncoding("utf-8");
 (참고)
 url에서 context 루트에 /JSPBasic 이런거 수정하거나 아예 안나오게 하려면 server.xml 파일 152번 라인의 <Context에서 수정>
 아예 안나오게 하려면 / 만 쓰면된다!
+
+
+
+
+
+
+상대경로에서 2단계 상위 폴더면 ../../    이렇게 ../ 2번!!
