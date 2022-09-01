@@ -41,3 +41,29 @@ url에서 context 루트에 /JSPBasic 이런거 수정하거나 아예 안나오
 
 
 상대경로에서 2단계 상위 폴더면 ../../    이렇게 ../ 2번!!
+
+
+
+colspan rowspan 자세히
+https://m.blog.naver.com/gounsori90/220531860547
+
+
+
+
+
+css 우선 적용순위 : 인라인 > 내부 > 외부
+
+
+
+
+if(id.equals("abc1234")){
+			if(pw.equals("xyz9876")){
+				response.sendRedirect("13_response_welcome.jsp");
+			}else{
+				response.sendRedirect("12_response_pw_fail.jsp");
+			}
+		}else{
+			response.sendRedirect("11_response_id_fail.jsp");
+		}
+
+로그인 아이디, 비밀번호 일치 로직!!
