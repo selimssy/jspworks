@@ -1,0 +1,36 @@
+getParameterNames() : java.util.Enumration   
+-  웹 브라우저 전송한 파라미터의 이름 목록을 구한다
+
+getParameterMap() : java.util.Map    
+-  웹 브라우저가 전송한 파라미터의 맵을 구한다. 맵은 <파라미터 이름, 파라미터 값> 쌍으로 구성된다
+
+
+
+사진이 이클립스에 안보일 때는 img 폴더를 만들어서 여기다가 import해서 쓰자!!
+
+
+
+
+get 방식은 html form태그가 없이도 링크를 통해 요청할 수 있고(대신 보안에 취약)
+post 방식은 반드시 html form 태그가 필요하다!! (대신 데이터가 url에 노출되지 않아 보안에 강하고 대량의 데이터 전송 가능)
+
+
+
+
+get/post (톰캣땜에) 문자처리 깨지는 현상  해결
+1. get 방식 한글처리 : server.xml파일 수정 -> (근데 톰캣9는 수정 안해도 된다)
+ -> (만약 회사가 톰캣8을 쓴다면)  63번 라인의 <connector> 의 속성 값으로 URIEncoding="utf-8" 추가해야!!
+
+2. post 방식 한글처리: 데이터 받아주는 페이지로 가서 <%%> 안에 아래 소스코드 추가해준다!!
+request.setCharacterEncoding("utf-8");
+
+
+
+
+
+
+
+
+(참고)
+url에서 context 루트에 /JSPBasic 이런거 수정하거나 아예 안나오게 하려면 server.xml 파일 152번 라인의 <Context에서 수정>
+아예 안나오게 하려면 / 만 쓰면된다!
