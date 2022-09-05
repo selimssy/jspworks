@@ -9,4 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/Exception/5_error_when_404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/Exception/7_error_when_500.jsp</location>
+  </error-page>
+  
+  
+  <error-page>
+	  <exception-type>java.lang.NullPointerException</exception-type>
+	  <location>/Exception/9_error_when_null.jsp</location>
+  </error-page>
+  
 </web-app>
